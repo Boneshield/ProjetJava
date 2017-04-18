@@ -1,7 +1,11 @@
 package model;
 
 public class Personnel extends Profil{
-    boolean gerant = false;
+    private boolean gerant = false;
+    
+    public Personnel(){
+        super();
+    }
     
     public void definirGerant{
         gerant = true;
