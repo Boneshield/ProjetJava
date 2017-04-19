@@ -1,7 +1,7 @@
 package model;
 
 public class BDPersonnel{
-    private Map<int, Personnel> hashmap = new Hashmap<>();
+    private Map<Integer, Personnel> listePersonnel = new Hashmap<>();
     
     public void ajouterPersonnel(Personnel personnel){
         hashmap.put(personnel.getNumeroPersonnel(), personnel);
