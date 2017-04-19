@@ -1,6 +1,6 @@
 ## Répertoire des Documents Java
 
 
-[![bouton](http://google.com)](http://google.com)
+[![bouton](https://google.com)](https://google.com)
 
 C'est cool ! OMG des boutons !
