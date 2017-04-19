@@ -7,7 +7,7 @@ public class Personnel extends Profil{
         super(login, mdp, nom, prenom);
     }
     
-    public void definirGerant{
-        gerant = true;
+    public void definirGerant() {
+        this.gerant = true;
     }
 }
