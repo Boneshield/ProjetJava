@@ -7,8 +7,8 @@ public abstract class Profil {
 	private String prenom;
 	private boolean connecte=false;
 	
-	public Profil(String login, String mdp,	String nom, String prenom) {
-		this.login=login;
+	public Profil(String mdp, String nom, String prenom) {
+		this.login=nom+"."+prenom;
 		this.mdp=mdp;
 		this.nom=nom;
 		this.prenom=prenom;
