@@ -14,8 +14,27 @@ public abstract class Profil {
 		this.prenom=prenom;
 	}
 	
+	public String getLogin() {
+		return this.login;
+	}
+	
+	public String getMdp() {
+		return this.mdp;
+	}
+	
+	public String getNom() {
+		return this.nom;
+	}
+	
+	public String getPrenom() {
+		return this.prenom;
+	}
+	
 	public void seConnecter() {
 		this.connecte=true;
 	}
 	
+	public boolean isConnected() {
+		return this.connecte; 
+	}
 }
