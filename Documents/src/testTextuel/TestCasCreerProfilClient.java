@@ -1,9 +1,9 @@
 package testTextuel;
 
 import control.ControlCreerProfil;
-import restaurationRapide.BDClient;
-import restaurationRapide.BDPersonnel;
-import vueTextuelle.BoundaryCreerProfilClient;
+import model.BDClient;
+import model.BDPersonnel;
+import vue.BoundaryCreerProfilClient;
 
 public class TestCasCreerProfilClient {
 

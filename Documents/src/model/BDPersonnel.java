@@ -1,9 +1,12 @@
 package model;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class BDPersonnel{
-    private Map<Integer, Personnel> listePersonnel = new Hashmap<>();
+    private Map<Integer, Personnel> listePersonnel = new HashMap<>();
     
     public void ajouterPersonnel(Personnel personnel){
-        hashmap.put(personnel.getNumeroPersonnel(), personnel);
+        listePersonnel.put(personnel.getNumeroPersonnel(), personnel);
     }
 }
