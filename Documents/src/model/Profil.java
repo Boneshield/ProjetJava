@@ -37,4 +37,8 @@ public abstract class Profil {
 	public boolean isConnected() {
 		return this.connecte; 
 	}
+	
+	public String toString() { 
+		return "Client [nom="+this.getNom()+", prenom="+this.getPrenom()+", login="+this.getLogin()+", mdp="+this.getMdp()+", connecte="+this.isConnected()+"]"; 
+	}
 }

@@ -6,7 +6,4 @@ public class Client extends Profil {
 		super(mdp,nom,prenom);
 	}
 	
-	public String toString() { 
-	return "Client [nom="+this.getNom()+", prenom="+this.getPrenom()+", login="+this.getLogin()+", mdp="+this.getMdp()+", connecte="+this.isConnected()+"]"; 
-	}
 }

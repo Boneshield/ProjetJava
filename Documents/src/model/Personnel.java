@@ -15,4 +15,8 @@ public class Personnel extends Profil{
     public int getNumeroPersonnel(){
         return numeroPersonnel;
     }
+    
+    public void setNumeroPersonnel(Personnel personnel, int numero) {
+    	personnel.numeroPersonnel = numero;
+    }
 }
