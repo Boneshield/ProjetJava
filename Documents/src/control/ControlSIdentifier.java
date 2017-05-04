@@ -4,10 +4,11 @@ import model.BDClient;
 import model.BDPersonnel;
 import model.ProfilUtilisateur;
 
-public class ControlCreerProfil {
+public class ControlSIdentifier {
 
-	public ControlCreerProfil(BDClient bdClient, BDPersonnel bdPersonnel) {
+	public ControlSIdentifier(BDClient bdClient, BDPersonnel bdPersonnel) {
 		// TODO Auto-generated constructor stub
+		
 	}
 
 	public char[] visualiserBDUtilisateur() {
@@ -15,10 +16,10 @@ public class ControlCreerProfil {
 		return null;
 	}
 
-	public void creerProfil(ProfilUtilisateur client, String nom,
-			String prenom, String login) {
+	public int sIdentifier(ProfilUtilisateur gerant, String nom,
+			String prenom) {
 		// TODO Auto-generated method stub
-		
+		return 0;
 	}
 
 }

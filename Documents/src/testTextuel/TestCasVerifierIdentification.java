@@ -3,9 +3,9 @@ package testTextuel;
 import control.ControlCreerProfil;
 import control.ControlSIdentifier;
 import control.ControlVerifierIdentification;
-import restaurationRapide.BDClient;
-import restaurationRapide.BDPersonnel;
-import restaurationRapide.ProfilUtilisateur;
+import model.BDClient;
+import model.BDPersonnel;
+import model.ProfilUtilisateur;
 
 public class TestCasVerifierIdentification {
 
@@ -44,7 +44,7 @@ public class TestCasVerifierIdentification {
 		System.out.println("VERIFICATION");
 		System.out.println("Gerant identifier : " + identificationGerantOK);
 		System.out.println("Client identifier : " + identificationClientOK);
-
+		
 		// Resultat du test
 		// VERIFICATION
 		// Gerant identifier : true

@@ -35,4 +35,9 @@ public class ControlAjouterAlimentCarte {
 				break;
 		}
 	}
+
+	public char[] visualiserCarte() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

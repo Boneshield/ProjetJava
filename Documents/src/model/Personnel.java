@@ -9,7 +9,7 @@ public class Personnel extends Profil{
     }
     
     public void definirGerant() {
-        this.gerant = true;
+        this.setGerant(true);
     }
     
     public int getNumeroPersonnel(){
@@ -19,4 +19,12 @@ public class Personnel extends Profil{
     public void setNumeroPersonnel(Personnel personnel, int numero) {
     	personnel.numeroPersonnel = numero;
     }
+
+	public boolean isGerant() {
+		return gerant;
+	}
+
+	public void setGerant(boolean estGerant) {
+		this.gerant = estGerant;
+	}
 }

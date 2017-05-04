@@ -11,4 +11,14 @@ public class BDClient {
 	public void ajouterClient(Client client) {
 		
 	}
+
+
+	public Map<Integer, Client> getListeClient() {
+		return ListeClient;
+	}
+
+
+	public void setListeClient(Map<Integer, Client> listeClient) {
+		ListeClient = listeClient;
+	}
 }

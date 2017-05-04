@@ -2,10 +2,10 @@ package testTextuel;
 
 import control.ControlCreerProfil;
 import control.ControlSIdentifier;
-import restaurationRapide.BDClient;
-import restaurationRapide.BDPersonnel;
-import restaurationRapide.ProfilUtilisateur;
-import vueTextuelle.BoundarySIdentifierPersonnel;
+import model.BDClient;
+import model.BDPersonnel;
+import model.ProfilUtilisateur;
+import vue.BoundarySIdentifierPersonnel;
 
 public class TestCasSIdentifierPersonnel {
 
@@ -29,7 +29,7 @@ public class TestCasSIdentifierPersonnel {
 		// Lancement du cas
 		boundarySIdentifierPersonnel.identificationPersonnel();
 
-		// Verification de la bonne réalisation du cas
+		// Verification de la bonne rï¿½alisation du cas
 		System.out.println("VERIFICATION");
 		System.out.println(controlSIdentifier.visualiserBDUtilisateur());
 

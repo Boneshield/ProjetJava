@@ -7,14 +7,14 @@ import control.ControlEnregistrerCoordonneesBancaires;
 import control.ControlSIdentifier;
 import control.ControlVerifierCoordonneesBancaires;
 import control.ControlVerifierIdentification;
-import restaurationRapide.AlimentMenu;
-import restaurationRapide.BDClient;
-import restaurationRapide.BDCommande;
-import restaurationRapide.BDPersonnel;
-import restaurationRapide.Carte;
-import restaurationRapide.ProfilUtilisateur;
-import vueTextuelle.BoundaryCommander;
-import vueTextuelle.BoundaryEnregistrerCoordonneesBancaires;
+import control.TypeAliment;
+import model.BDClient;
+import model.BDCommande;
+import model.BDPersonnel;
+import model.Carte;
+import model.ProfilUtilisateur;
+import vue.BoundaryCommander;
+import vue.BoundaryEnregistrerCoordonneesBancaires;
 
 public class TestCasCommander {
 
@@ -24,28 +24,27 @@ public class TestCasCommander {
 		BDCommande bdCommande = new BDCommande();
 		BDClient bdClient = new BDClient();
 		BDPersonnel bdPersonnel = new BDPersonnel();
-		Carte carte = new Carte();
+		Carte carte = Carte.getInstance();
 
 		// Mise en place de l'environnement
 		ControlCreerProfil controlCreerProfil = new ControlCreerProfil(
 				bdClient, bdPersonnel);
-		ControlAjouterAlimentCarte controlAjouterAlimentCarte = new ControlAjouterAlimentCarte(
-				carte);
+		ControlAjouterAlimentCarte controlAjouterAlimentCarte = new ControlAjouterAlimentCarte();
 		ControlSIdentifier controlSIdentifier = new ControlSIdentifier(
 				bdClient, bdPersonnel);
 
-		controlAjouterAlimentCarte.ajouterAliment(AlimentMenu.HAMBURGER,
+		controlAjouterAlimentCarte.ajouterAliment(TypeAliment.HAMBURGER,
 				"baconBurger");
-		controlAjouterAlimentCarte.ajouterAliment(AlimentMenu.HAMBURGER,
+		controlAjouterAlimentCarte.ajouterAliment(TypeAliment.HAMBURGER,
 				"chickenBurger");
-		controlAjouterAlimentCarte.ajouterAliment(AlimentMenu.HAMBURGER,
+		controlAjouterAlimentCarte.ajouterAliment(TypeAliment.HAMBURGER,
 				"cheeseBurger");
-		controlAjouterAlimentCarte.ajouterAliment(AlimentMenu.ACCOMPAGNEMENT,
+		controlAjouterAlimentCarte.ajouterAliment(TypeAliment.ACCOMPAGNEMENT,
 				"frites");
-		controlAjouterAlimentCarte.ajouterAliment(AlimentMenu.ACCOMPAGNEMENT,
+		controlAjouterAlimentCarte.ajouterAliment(TypeAliment.ACCOMPAGNEMENT,
 				"pommesChips");
-		controlAjouterAlimentCarte.ajouterAliment(AlimentMenu.BOISSON, "coca");
-		controlAjouterAlimentCarte.ajouterAliment(AlimentMenu.BOISSON,
+		controlAjouterAlimentCarte.ajouterAliment(TypeAliment.BOISSON, "coca");
+		controlAjouterAlimentCarte.ajouterAliment(TypeAliment.BOISSON,
 				"orangeBulles");
 
 		controlCreerProfil.creerProfil(ProfilUtilisateur.CLIENT, "Dupond",

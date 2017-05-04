@@ -2,10 +2,10 @@ package testTextuel;
 
 import control.ControlCreerProfil;
 import control.ControlSIdentifier;
-import restaurationRapide.BDClient;
-import restaurationRapide.BDPersonnel;
-import restaurationRapide.ProfilUtilisateur;
-import vueTextuelle.BoundarySIdentifierClient;
+import model.BDClient;
+import model.BDPersonnel;
+import model.ProfilUtilisateur;
+import vue.BoundarySIdentifierClient;
 
 public class TestCasSIdentifierClient {
 

@@ -4,10 +4,10 @@ import control.ControlCreerProfil;
 import control.ControlEnregistrerCoordonneesBancaires;
 import control.ControlSIdentifier;
 import control.ControlVerifierCoordonneesBancaires;
-import restaurationRapide.BDClient;
-import restaurationRapide.BDPersonnel;
-import restaurationRapide.ProfilUtilisateur;
-import vueTextuelle.BoundaryEnregistrerCoordonneesBancaires;
+import model.BDClient;
+import model.BDPersonnel;
+import model.ProfilUtilisateur;
+import vue.BoundaryEnregistrerCoordonneesBancaires;
 
 public class TestCasEnregistrerCoordonneesBancaires {
 

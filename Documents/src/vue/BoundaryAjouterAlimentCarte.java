@@ -1,6 +1,7 @@
 package vue;
 
 import control.ControlAjouterAlimentCarte;
+import control.ControlVerifierIdentification;
 import control.TypeAliment;
 
 public class BoundaryAjouterAlimentCarte {
@@ -10,11 +11,11 @@ public class BoundaryAjouterAlimentCarte {
 	private int choix;
 	private boolean EntreeValide = false;
 	
-	public BoundaryAjouterAlimentCarte(ControlAjouterAlimentCarte controlAjouterAlimentCarte) {
+	public BoundaryAjouterAlimentCarte(ControlVerifierIdentification controlVerifierIdentification, ControlAjouterAlimentCarte controlAjouterAlimentCarte) {
 		
 	}
 	
-	public void AjouterAlimentCarte(int numProfil) {
+	public void ajouterAlimentCarte(int numProfil) {
 		
 		do
 		{

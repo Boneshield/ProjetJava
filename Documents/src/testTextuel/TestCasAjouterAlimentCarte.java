@@ -4,11 +4,11 @@ import control.ControlAjouterAlimentCarte;
 import control.ControlCreerProfil;
 import control.ControlSIdentifier;
 import control.ControlVerifierIdentification;
-import restaurationRapide.BDClient;
-import restaurationRapide.BDPersonnel;
-import restaurationRapide.Carte;
-import restaurationRapide.ProfilUtilisateur;
-import vueTextuelle.BoundaryAjouterAlimentCarte;
+import model.BDClient;
+import model.BDPersonnel;
+import model.Carte;
+import model.ProfilUtilisateur;
+import vue.BoundaryAjouterAlimentCarte;
 
 public class TestCasAjouterAlimentCarte {
 
@@ -16,7 +16,7 @@ public class TestCasAjouterAlimentCarte {
 		// Initialisation des objets metier
 		BDClient bdClient = new BDClient();
 		BDPersonnel bdPersonnel = new BDPersonnel();
-		Carte carte = new Carte();
+		Carte carte = Carte.getInstance();
 
 		// Mise en place de l'environnement
 		ControlCreerProfil controlCreerProfil = new ControlCreerProfil(
@@ -33,8 +33,7 @@ public class TestCasAjouterAlimentCarte {
 				bdClient, bdPersonnel);
 
 		// Initialisation controleur du cas
-		ControlAjouterAlimentCarte controlAjouterAlimentCarte = new ControlAjouterAlimentCarte(
-				carte);
+		ControlAjouterAlimentCarte controlAjouterAlimentCarte = new ControlAjouterAlimentCarte();
 		// Initialisation vue du cas
 		BoundaryAjouterAlimentCarte boundaryAjouterAlimentCarte = new BoundaryAjouterAlimentCarte(
 				controlVerifierIdentification, controlAjouterAlimentCarte);
@@ -56,6 +55,6 @@ public class TestCasAjouterAlimentCarte {
 		// VERIFICATION
 		// Carte [listeHamburger=[], listeBoisson=[],
 		// listeAccompagnement=[Aliment [nom=frites]]]
-
+		
 	}
 }
