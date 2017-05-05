@@ -7,8 +7,8 @@ public abstract class Profil {
 	private String prenom;
 	private boolean connecte=false;
 	
-	public Profil(String mdp, String nom, String prenom) {
-		this.login=nom+"."+prenom;
+	public Profil(String nom, String prenom, String mdp) {
+		this.login=prenom+"."+nom;
 		this.mdp=mdp;
 		this.nom=nom;
 		this.prenom=prenom;
@@ -38,7 +38,4 @@ public abstract class Profil {
 		return this.connecte; 
 	}
 	
-	public String toString() { 
-		return "Client [nom="+this.getNom()+", prenom="+this.getPrenom()+", login="+this.getLogin()+", mdp="+this.getMdp()+", connecte="+this.isConnected()+"]"; 
-	}
 }

@@ -4,12 +4,12 @@ public class Personnel extends Profil{
     private boolean gerant = false;
     private int numeroPersonnel;
     
-    public Personnel(String mdp, String nom, String prenom){
-        super(mdp, nom, prenom);
+    public Personnel(String nom, String prenom, String mdp){
+        super(nom, prenom, mdp);
     }
     
     public void definirGerant() {
-        this.setGerant(true);
+        this.gerant = true;
     }
     
     public int getNumeroPersonnel(){
@@ -23,8 +23,10 @@ public class Personnel extends Profil{
 	public boolean isGerant() {
 		return gerant;
 	}
-
-	public void setGerant(boolean estGerant) {
-		this.gerant = estGerant;
-	}
+	
+	public String toString() {
+		return "Personnel [nom=" + getNom() + ", prenom=" + getPrenom()
+		+ ", login=" + getLogin() + ", mdp=" + getMdp() + ", gerant="
+		+ gerant + ", connecte=" + this.isConnected() + "]";
+		}
 }
