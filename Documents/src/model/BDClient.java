@@ -6,11 +6,10 @@ import java.util.Map;
 public class BDClient {
 	
 	private Map<Integer, Client> listeClient = new HashMap<>();
-	private int numero = 0;
+	int nbClient = 0;
 	
 	public void ajouterClient(Client client) {
-		listeClient.put(numero, client);
-		this.numero++;
+		listeClient.put(nbClient++ ,client);
 	}
 
 
@@ -18,12 +17,13 @@ public class BDClient {
 		return listeClient;
 	}
 
-
-	public void setListeClient(Map<Integer, Client> listeClient) {
-		this.listeClient = listeClient;
-	}
 	
 	public String toString() {
     	return "BDClient [listeClient=" + listeClient + "]";
     }
+	
+	public int selectProfil(String login, String mdp) {	
+		//Parcours de la hashMap
+		return 0;
+	}
 }

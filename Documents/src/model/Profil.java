@@ -5,7 +5,7 @@ public abstract class Profil {
 	private String mdp;
 	private String nom;
 	private String prenom;
-	private boolean connecte=false;
+	protected boolean connecte=false;
 	
 	public Profil(String nom, String prenom, String mdp) {
 		this.login=prenom+"."+nom;

@@ -2,7 +2,6 @@ package model;
 
 public class Personnel extends Profil{
     private boolean gerant = false;
-    private int numeroPersonnel;
     
     public Personnel(String nom, String prenom, String mdp){
         super(nom, prenom, mdp);
@@ -10,14 +9,6 @@ public class Personnel extends Profil{
     
     public void definirGerant() {
         this.gerant = true;
-    }
-    
-    public int getNumeroPersonnel(){
-        return numeroPersonnel;
-    }
-    
-    public void setNumeroPersonnel(Personnel personnel, int numero) {
-    	personnel.numeroPersonnel = numero;
     }
 
 	public boolean isGerant() {
@@ -29,4 +20,8 @@ public class Personnel extends Profil{
 		+ ", login=" + getLogin() + ", mdp=" + getMdp() + ", gerant="
 		+ gerant + ", connecte=" + this.isConnected() + "]";
 		}
+	
+	public void connexionProfil() {
+		this.connecte = true;
+	}
 }

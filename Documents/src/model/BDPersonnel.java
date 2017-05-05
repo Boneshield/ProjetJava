@@ -5,13 +5,23 @@ import java.util.Map;
 
 public class BDPersonnel{
     private Map<Integer, Personnel> listePersonnel = new HashMap<>();
-    private int numero = 0;
+    int nbPersonnel = 0;
     
     public void ajouterPersonnel(Personnel personnel){
-        listePersonnel.put(numero++, personnel);
+        listePersonnel.put(nbPersonnel, personnel);
     }
+    
+    public Map<Integer, Personnel> getListePersonnel() {
+		return listePersonnel;
+	}
     
     public String toString() {
     	return "BDPersonnel [listePersonnel=" + listePersonnel + "]";
     }
+    
+    public int selectProfil(String login, String mdp) {	
+		//Parcours de la hashMap
+		return 0;
+	}
+    
 }
