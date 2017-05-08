@@ -19,9 +19,12 @@ public class BDPersonnel{
     	return "BDPersonnel [listePersonnel=" + listePersonnel + "]";
     }
     
-    public int selectProfil(String login, String mdp) {	
+    public int selectProfil(String login, String mdp) {
 		//Parcours de la hashMap
 		return 0;
 	}
     
+    public Personnel getPersonnel(int numPersonnel){
+	    return listePersonnel.get(numPersonnel);
+	}
 }

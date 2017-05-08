@@ -22,8 +22,12 @@ public class BDClient {
     	return "BDClient [listeClient=" + listeClient + "]";
     }
 	
-	public int selectProfil(String login, String mdp) {	
+	public int selectProfil(String login, String mdp) {
 		//Parcours de la hashMap
 		return 0;
+	}
+	
+	public Client getClient(int numClient){
+	    return listeClient.get(numClient);
 	}
 }
