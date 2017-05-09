@@ -31,7 +31,7 @@ public class ControlAjouterAlimentCarte {
 		}
 	}
 
-	public char[] visualiserCarte() {
+	public String visualiserCarte() {
 		return(Carte.listeHamburger + "," + Carte.listeBoisson + "," + Carte.listeAccompagnement);
 	}
 }
