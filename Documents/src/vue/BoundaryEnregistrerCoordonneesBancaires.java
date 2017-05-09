@@ -21,14 +21,8 @@ public class BoundaryEnregistrerCoordonneesBancaires {
 		System.out.println("Veuillez saisir votre numéro de carte bancaire");
 		numCarte = clavier.entreeClavierInt();
 		boolean entreeValide = true;
-		do{
-		    System.out.println("Veuillez saisir la date d'expiration de votre carte bancaire (MMAA)");
-		    dateCarte = clavier.entreeClavierInt();
-		    if(dateCarte < 100 && dateCarte > 1299){
-		        System.out.println("erreur: saisie date carte");
-		        entreeValide = false;
-		    }
-		}while(!entreeValide);
+		System.out.println("Veuillez saisir la date d'expiration de votre carte bancaire (MMAA)");
+		dateCarte = clavier.entreeClavierInt();
 		boolean carteValide = controlVerifierCoordonneesBancaires.verifierCoordonneesBancaires(numCarte, dateCarte);
 		if (carteValide){
 		    controlEnregistrerCoordonneesBancaires.enregistrerCoordonneesBancaires(numClient, numCarte, dateCarte);
