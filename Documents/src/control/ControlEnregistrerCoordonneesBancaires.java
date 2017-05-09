@@ -1,6 +1,7 @@
 package control;
 
 import model.BDClient;
+import model.Client;
 
 public class ControlEnregistrerCoordonneesBancaires {
     BDClient bdClient;
@@ -15,7 +16,7 @@ public class ControlEnregistrerCoordonneesBancaires {
     }
     
 	public String visualiserBDClient() {
-		return bdClient;
+		return (bdClient+"");
 	}
 
 }
