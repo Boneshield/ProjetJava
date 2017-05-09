@@ -30,12 +30,20 @@ public abstract class Profil {
 		return this.prenom;
 	}
 	
-	public void seConnecter() {
+	public void connexionProfil() {
 		this.connecte=true;
 	}
 	
 	public boolean isConnected() {
 		return this.connecte; 
+	}
+	
+	public boolean selectProfil(String login, String mdp) {
+		if(this.login == login && this.mdp == mdp)
+		{
+			return true;
+		}
+		return false;
 	}
 	
 }

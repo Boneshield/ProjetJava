@@ -20,18 +20,18 @@ public class BDPersonnel{
     	return "BDPersonnel [listePersonnel=" + listePersonnel + "]";
     }
     
-    public int selectProfil(String login, String mdp) {
+    public int connexionPersonnel(String login, String mdp) {
 		//Parcours de la hashMap
     	for(Entry<Integer, Personnel> entry : listePersonnel.entrySet()) {
 		    Integer cle = entry.getKey();
 		    Personnel valeur = entry.getValue();
-		    // traitements
-		    if(valeur.getLogin() == login && valeur.getMdp() == mdp)
+		    if(valeur.selectProfil(login, mdp))
 		    {
+		    	valeur.connexionProfil();
 		    	return cle;
 		    }
 		}
-		return 0;
+		return -1;
 	}
     
     public Personnel getPersonnel(int numPersonnel){

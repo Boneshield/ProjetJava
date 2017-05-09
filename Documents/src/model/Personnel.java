@@ -21,7 +21,4 @@ public class Personnel extends Profil{
 		+ gerant + ", connecte=" + this.isConnected() + "]";
 		}
 	
-	public void connexionProfil() {
-		this.connecte = true;
-	}
 }

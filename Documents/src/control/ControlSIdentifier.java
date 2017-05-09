@@ -5,10 +5,12 @@ import model.BDPersonnel;
 import model.ProfilUtilisateur;
 
 public class ControlSIdentifier {
-
+	private BDClient bdClient;
+	private BDPersonnel bdPersonnel;
+	
 	public ControlSIdentifier(BDClient bdClient, BDPersonnel bdPersonnel) {
-		// TODO Auto-generated constructor stub
-		
+		this.bdClient = bdClient;
+		this.bdPersonnel = bdPersonnel;
 	}
 
 	public char[] visualiserBDUtilisateur() {
@@ -16,10 +18,17 @@ public class ControlSIdentifier {
 		return null;
 	}
 
-	public int sIdentifier(ProfilUtilisateur gerant, String nom,
-			String prenom) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int sIdentifier(ProfilUtilisateur profil, String login,
+			String mdp) {
+		if(profil == ProfilUtilisateur.CLIENT)
+		{
+			return bdClient.connexionClient(login,mdp);
+		}
+		else if(profil == ProfilUtilisateur.PERSONNEL)
+		{
+			return bdPersonnel.connexionPersonnel(login,mdp);
+		}
+		return -1;
 	}
 
 }

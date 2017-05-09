@@ -23,18 +23,18 @@ public class BDClient {
     	return "BDClient [listeClient=" + listeClient + "]";
     }
 	
-	public int selectProfil(String login, String mdp) {
+	public int connexionClient(String login, String mdp) {
 		//Parcours de la hashMap
 		for(Entry<Integer, Client> entry : listeClient.entrySet()) {
 		    Integer cle = entry.getKey();
 		    Client valeur = entry.getValue();
-		    // traitements
-		    if(valeur.getLogin() == login && valeur.getMdp() == mdp)
+		    if(valeur.selectProfil(login, mdp))
 		    {
+		    	valeur.connexionProfil();
 		    	return cle;
 		    }
 		}
-		return 0;
+		return -1;
 	}
 	
 	public Client getClient(int numClient){
