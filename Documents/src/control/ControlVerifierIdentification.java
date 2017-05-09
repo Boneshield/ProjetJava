@@ -2,6 +2,8 @@ package control;
 
 import model.BDClient;
 import model.BDPersonnel;
+import model.Client;
+import model.Personnel;
 import model.ProfilUtilisateur;
 
 public class ControlVerifierIdentification {
@@ -21,17 +23,16 @@ public class ControlVerifierIdentification {
 		        Client client;
 		        client= bdClient.getClient(numProfil);
 		        return client!= null && client.isConnected();
-		        break;
+		        
 		    case PERSONNEL:
 		        Personnel personnel;
 		        personnel = bdPersonnel.getPersonnel(numProfil);
 		        return personnel!= null && personnel.isConnected();
-		        break;
+		        
 		    case GERANT:
 		        Personnel gerant;
 		        gerant = bdPersonnel.getPersonnel(numProfil);
 		        return gerant!= null && gerant.isConnected() && gerant.isGerant();
-		        break;
 		}
 		return false;
 	}

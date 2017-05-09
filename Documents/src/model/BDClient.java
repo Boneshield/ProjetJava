@@ -2,6 +2,7 @@ package model;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 
 public class BDClient {
 	
@@ -24,6 +25,15 @@ public class BDClient {
 	
 	public int selectProfil(String login, String mdp) {
 		//Parcours de la hashMap
+		for(Entry<Integer, Client> entry : listeClient.entrySet()) {
+		    Integer cle = entry.getKey();
+		    Client valeur = entry.getValue();
+		    // traitements
+		    if(valeur.getLogin() == login && valeur.getMdp() == mdp)
+		    {
+		    	return cle;
+		    }
+		}
 		return 0;
 	}
 	

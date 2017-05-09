@@ -34,9 +34,9 @@ public class TestCasSIdentifierClient {
 		System.out.println(controlSIdentifier.visualiserBDUtilisateur());
 
 		// Resultat du test
-		// Veuilliez entrer votre login
+		// Veuillez entrer votre login
 		// Hector.Dupond
-		// Veuilliez entrer votre mot de passe
+		// Veuillez entrer votre mot de passe
 		// cdh
 		// VERIFICATION
 		// BDPersonnel [listePersonnel={}]
