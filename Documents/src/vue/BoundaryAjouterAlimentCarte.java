@@ -6,13 +6,15 @@ import control.TypeAliment;
 
 public class BoundaryAjouterAlimentCarte {
 	private ControlAjouterAlimentCarte controlAjouterAlimentCarte;
+	private ControlVerifierIdentification controlVerifierIdentification;
 	
 	private Clavier clavier = new Clavier();
 	private int choix;
 	private boolean EntreeValide = false;
 	
 	public BoundaryAjouterAlimentCarte(ControlVerifierIdentification controlVerifierIdentification, ControlAjouterAlimentCarte controlAjouterAlimentCarte) {
-		
+	    this.controlVerifierIdentification = controlVerifierIdentification;
+		this.controlAjouterAlimentCarte = controlAjouterAlimentCarte;
 	}
 	
 	public void ajouterAlimentCarte(int numProfil) {
@@ -46,7 +48,7 @@ public class BoundaryAjouterAlimentCarte {
 				controlAjouterAlimentCarte.ajouterAliment(TypeAliment.BOISSON, nom);
 				break;
 			default:
-				System.out.println("Type d'aliment nom reconnu");	
+				System.out.println("Type d'aliment nom reconnu");
 		}
 	}
 }

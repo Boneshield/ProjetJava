@@ -6,11 +6,6 @@ import model.Accompagnement;
 import model.Boisson;
 
 public class ControlAjouterAlimentCarte {
-	private final Carte carte;
-	
-	public ControlAjouterAlimentCarte() {
-		 carte = Carte.getInstance();
-	}
 	
 	public void ajouterAliment(TypeAliment aliment, String nom) {
 		
@@ -18,17 +13,17 @@ public class ControlAjouterAlimentCarte {
 		{
 			case HAMBURGER :
 				Hamburger hamburger = new Hamburger(nom);
-				carte.ajouterHamburger(hamburger);
+				Carte.ajouterHamburger(hamburger);
 				break;
 	
 			case ACCOMPAGNEMENT :
 				Accompagnement accompagnement = new Accompagnement(nom);
-				carte.ajouterAccompagnement(accompagnement);
+				Carte.ajouterAccompagnement(accompagnement);
 				break;
 			
 			case BOISSON :
 				Boisson boisson = new Boisson(nom);
-				carte.ajouterBoisson(boisson);
+				Carte.ajouterBoisson(boisson);
 				
 			default:
 				System.out.println("type aliment non reconnu");
@@ -37,7 +32,6 @@ public class ControlAjouterAlimentCarte {
 	}
 
 	public char[] visualiserCarte() {
-		// TODO Auto-generated method stub
-		return null;
+		return(Carte.listeHamburger + "," + Carte.listeBoisson + "," + Carte.listeAccompagnement);
 	}
 }
