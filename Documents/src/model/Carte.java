@@ -5,9 +5,9 @@ import java.util.ArrayList;
 
 public final class Carte {
 	private static Carte instance = null; 
-	private List<Hamburger> listeHamburger = new ArrayList<>();
-	private List<Accompagnement> listeAccompagnement = new ArrayList<>();
-	private List<Boisson> listeBoisson = new ArrayList<>();
+	private static List<Hamburger> listeHamburger = new ArrayList<>();
+	private static List<Accompagnement> listeAccompagnement = new ArrayList<>();
+	private static List<Boisson> listeBoisson = new ArrayList<>();
 	
 	private Carte() {
 		super();
@@ -25,16 +25,21 @@ public final class Carte {
 	}
 	
 	
-	public void ajouterHamburger(Hamburger hamburger) {
+	public static void ajouterHamburger(Hamburger hamburger) {
 		listeHamburger.add(hamburger);
 	}
 	
-	public void ajouterAccompagnement(Accompagnement accompagnement) {
+	public static void ajouterAccompagnement(Accompagnement accompagnement) {
 		listeAccompagnement.add(accompagnement);
 	}
 	
-	public void ajouterBoisson(Boisson boisson) {
+	public static void ajouterBoisson(Boisson boisson) {
 		listeBoisson.add(boisson);
+	}
+	
+	public String toString() {
+		return "Carte [listeHamburger=" + listeHamburger + ", listeAccompagnement=" + listeAccompagnement
+				+ ", listeBoisson=" + listeBoisson + "]";
 	}
 	
 }
