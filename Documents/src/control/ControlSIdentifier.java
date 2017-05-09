@@ -13,9 +13,8 @@ public class ControlSIdentifier {
 		this.bdPersonnel = bdPersonnel;
 	}
 
-	public char[] visualiserBDUtilisateur() {
-		// TODO Auto-generated method stub
-		return null;
+	public String visualiserBDUtilisateur() {
+		return (bdPersonnel + "\n" + bdClient);
 	}
 
 	public int sIdentifier(ProfilUtilisateur profil, String login,
@@ -24,11 +23,10 @@ public class ControlSIdentifier {
 		{
 			return bdClient.connexionClient(login,mdp);
 		}
-		else if(profil == ProfilUtilisateur.PERSONNEL)
+		else
 		{
 			return bdPersonnel.connexionPersonnel(login,mdp);
 		}
-		return -1;
 	}
 
 }

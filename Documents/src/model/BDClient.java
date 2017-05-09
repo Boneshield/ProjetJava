@@ -13,7 +13,6 @@ public class BDClient {
 		listeClient.put(nbClient++ ,client);
 	}
 
-
 	public Map<Integer, Client> getListeClient() {
 		return listeClient;
 	}
@@ -25,9 +24,10 @@ public class BDClient {
 	
 	public int connexionClient(String login, String mdp) {
 		//Parcours de la hashMap
+		Client valeur;
 		for(Entry<Integer, Client> entry : listeClient.entrySet()) {
 		    Integer cle = entry.getKey();
-		    Client valeur = entry.getValue();
+		    valeur = entry.getValue();
 		    if(valeur.selectProfil(login, mdp))
 		    {
 		    	valeur.connexionProfil();

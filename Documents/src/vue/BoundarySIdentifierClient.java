@@ -1,5 +1,6 @@
 package vue;
 
+import model.ProfilUtilisateur;
 import control.ControlSIdentifier;
 
 public class BoundarySIdentifierClient {
@@ -12,9 +13,13 @@ public class BoundarySIdentifierClient {
 		this.controlSIdentifier = controlSIdentifier;
 	}
 
-	public void identificationClient() {
-		
-		
+	public int identificationClient() {
+		String login, mdp;
+		System.out.println("Veuillez entrer votre login");
+		login = clavier.entreeClavierString();
+		System.out.println("Veuillez entrer votre mot de passe");
+		mdp = clavier.entreeClavierString();
+		return controlSIdentifier.sIdentifier(ProfilUtilisateur.CLIENT, login, mdp);
 	}
 
 }

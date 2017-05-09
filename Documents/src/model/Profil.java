@@ -39,7 +39,7 @@ public abstract class Profil {
 	}
 	
 	public boolean selectProfil(String login, String mdp) {
-		if(this.login == login && this.mdp == mdp)
+		if(this.login.compareTo(login) ==0 && this.mdp.compareTo(mdp) == 0)
 		{
 			return true;
 		}

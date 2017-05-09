@@ -16,4 +16,8 @@ public class CarteBancaire{
     public int dateCarte(){
         return dateCarte;
     }
+    
+    public String toString() {
+    	return ("carteBancaire [numcarte= "+ this.numCarte +", datecarte="+ this.dateCarte() +"]");
+    }
 }
