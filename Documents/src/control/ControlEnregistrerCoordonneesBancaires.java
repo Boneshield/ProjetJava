@@ -3,14 +3,19 @@ package control;
 import model.BDClient;
 
 public class ControlEnregistrerCoordonneesBancaires {
+    BDClient bdClient;
 
 	public ControlEnregistrerCoordonneesBancaires(BDClient bdClient) {
-		// TODO Auto-generated constructor stub
+		this.bdClient = bdClient;
 	}
 
-	public char[] visualiserBDClient() {
-		// TODO Auto-generated method stub
-		return null;
+    public void enregistrerCoordonneesBancaires(int numClient, int numCarte, int dateCarte){
+        Client client = bdClient.getClient(numClient);
+        client.enregistrerCoordonneesBancaires(numCarte, dateCarte);
+    }
+    
+	public String visualiserBDClient() {
+		return bdClient;
 	}
 
 }
