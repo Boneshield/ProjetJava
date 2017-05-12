@@ -7,10 +7,10 @@ import java.util.Map.Entry;
 public class BDClient {
 	
 	private Map<Integer, Client> listeClient = new HashMap<>();
-	int nbClient = 0;
+	private int numClient = 0;
 	
 	public void ajouterClient(Client client) {
-		listeClient.put(nbClient++ ,client);
+		listeClient.put(numClient++ ,client);
 	}
 
 	public Map<Integer, Client> getListeClient() {
