@@ -48,7 +48,11 @@ public class ControlCommander {
 	}
 	
 	public int enregistrerCommande(int numClient, int numHamburger, int numAccompagnement, int numBoisson){
-	    Commande commande = new Commande(numClient, numHamburger, numAccompagnement, numBoisson);
+	    Client client = bdClient.getClient(numClient);
+	    Hamburger hamburger = Carte.getInstance().getHamburger(numHamburger);
+	    Accompagnement accompagnement = Carte.getInstance().getAccompagnement(numAccompagnement);
+	    Boisson boisson = Carte.getInstance().getBoisson(numBoisson);
+	    Commande commande = new Commande(client, hamburger, accompagnement, boisson);
 	    int numCommande = bdCommande.ajouterCommande(commande);
 	    return numCommande;
 	}

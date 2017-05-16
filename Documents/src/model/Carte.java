@@ -1,3 +1,4 @@
+
 package model;
 
 import java.util.List;
@@ -43,7 +44,7 @@ public final class Carte {
 	}
 	
 	public List<Hamburger> getListeHamburger(){
-	    List<Hamburger> listeReturn = new ArrayList<Hamburger>();
+	    List<Hamburger> listeReturn = new ArrayList<>();
 	    for(Hamburger hamburger : this.listeHamburger){
 	        listeReturn.add((Hamburger) hamburger.clone());
 	    }
@@ -51,7 +52,7 @@ public final class Carte {
 	}
 	
 	public List<Accompagnement> getListeAccompagnement(){
-	    List<Accompagnement> listeReturn = new ArrayList<Accompagnement>();
+	    List<Accompagnement> listeReturn = new ArrayList<>();
 	    for(Accompagnement accompagnement : this.listeAccompagnement){
 	        listeReturn.add((Accompagnement) accompagnement.clone());
 	    }
@@ -59,10 +60,22 @@ public final class Carte {
 	}
 	
 	public List<Boisson> getListeBoisson(){
-	    List<Boisson> listeReturn = new ArrayList<Boisson>();
+	    List<Boisson> listeReturn = new ArrayList<>();
 	    for(Boisson boisson : this.listeBoisson){
 	        listeReturn.add((Boisson) boisson.clone());
 	    }
 	    return listeReturn;
+	}
+	
+	public Hamburger getHamburger(int numHamburger){
+	    return listeHamburger.get(numHamburger);
+	}
+	
+	public Accompagnement getAccompagnement(int numAccompagnement){
+	    return listeAccompagnement.get(numAccompagnement);
+	}
+	
+	public Boisson getBoisson(int numBoisson){
+	    return listeBoisson.get(numBoisson);
 	}
 }
