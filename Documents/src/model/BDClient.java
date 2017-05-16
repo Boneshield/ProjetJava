@@ -37,6 +37,20 @@ public class BDClient {
 		return -1;
 	}
 	
+	public void deconnexionClient(String login, String mdp) {
+		//Parcours de la hashMap
+		Client valeur;
+		for(Entry<Integer, Client> entry : listeClient.entrySet()) {
+		    Integer cle = entry.getKey();
+		    valeur = entry.getValue();
+		    if(valeur.selectProfil(login, mdp))
+		    {
+		    	valeur.deconnexionProfil();
+		    	return;
+		    }
+		}
+	}
+	
 	public Client getClient(int numClient){
 	    return listeClient.get(numClient);
 	}

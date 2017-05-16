@@ -34,8 +34,12 @@ public abstract class Profil {
 		this.connecte=true;
 	}
 	
+	public void deconnexionProfil() {
+		this.connecte=false;
+	}
+	
 	public boolean isConnected() {
-		return this.connecte; 
+		return this.connecte;
 	}
 	
 	public boolean selectProfil(String login, String mdp) {
