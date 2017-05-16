@@ -1,20 +1,23 @@
 package model;
 
 public class Commande{
+    private static int numCommande = 0;
     private Client client;
     private Hamburger hamburger;
     private int Accompagnement accompagnement;
     private int Boisson boisson;
+    private int numCommandeAttribue;
     
-    public Commande(Client client, Hamburger hamburger, Accompagnement accompagnement, Boisson boisson){
-        this.client = client;
+    public Commande(int numClient, Hamburger hamburger, Accompagnement accompagnement, Boisson boisson){
+        this.numClient = numClient;
         this.hamburger = hamburger;
         this.accompagnement = accompagnement;
         this.boisson = boisson;
+        numCommandeAttribue = numCommande++;
     }
     
-    public int getClient(){
-        return client;
+    public int getNumClient(){
+        return numClient;
     }
     
     public int getHamburger(){
@@ -27,5 +30,9 @@ public class Commande{
     
     public int getBoisson(){
         return boisson;
+    }
+    
+    public int getnumCommandeAttribue(){
+        return numCommandeAttribue;
     }
 }

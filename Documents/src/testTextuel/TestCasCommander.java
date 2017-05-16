@@ -21,7 +21,7 @@ public class TestCasCommander {
 	public static void main(String[] args) {
 
 		// Initialisation des objets metier
-		BDCommande bdCommande = new BDCommande();
+		BDCommande bdCommande = BDCommande.getInstance();
 		BDClient bdClient = new BDClient();
 		BDPersonnel bdPersonnel = new BDPersonnel();
 		Carte carte = Carte.getInstance();

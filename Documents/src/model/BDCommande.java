@@ -4,20 +4,34 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
-public class BDCommande {
-    private Map<Integer, Commande> listeCommande = new HashMap<>();
-    private int numCommande = 1;
+public final class BDCommande {
+    private static BDCommande = null;
+    private Map<Integer, Commande> mapCommande = new HashMap<>();
     
-    public int ajouterCommande(Commande commande){
-        listeCommande.put(numCommande, commande);
-        return numCommande++;
+    private BDCommande(){
+        super();
+    }
+    
+    private static class BDCommandeHolder{
+        private final static BDCommande instance = new BDCommande();
+    }
+    
+    public final static BDCommande getInstance() {
+		return BDCommande.instance;
+	}
+    
+    public int enregistrerCommande(int numClient, Hamburger hamburger, Accompagnement accompagnment, Boisson boisson){
+        Commande commande = new Commande(numClient, hamburger, accompagnement, boisson);
+        numCommande = commande.getNumCommandeAttribue();
+        mapCommande.put(numCommande, commande);
+        return numCommande;
     }
     
     public String toString() {
-    	return "BDCommande [listeCommande=" + listeCommande + "]";
+    	return "BDCommande [mapCommande=" + mapCommande + "]";
     }
     
-    public Commande getCommande(int numCommande){
-        return listeCommande.get(numCommande);
+    public Commande removeCommande(int numCommande){
+        return mapCommande.remove(numCommande);
     }
 }

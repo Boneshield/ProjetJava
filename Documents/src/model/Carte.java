@@ -67,15 +67,15 @@ public final class Carte {
 	    return listeReturn;
 	}
 	
-	public Hamburger getHamburger(int numHamburger){
+	public Hamburger choixHamburger(int numHamburger){
 	    return listeHamburger.get(numHamburger);
 	}
 	
-	public Accompagnement getAccompagnement(int numAccompagnement){
+	public Accompagnement choixAccompagnement(int numAccompagnement){
 	    return listeAccompagnement.get(numAccompagnement);
 	}
 	
-	public Boisson getBoisson(int numBoisson){
+	public Boisson choixBoisson(int numBoisson){
 	    return listeBoisson.get(numBoisson);
 	}
 }
