@@ -19,6 +19,11 @@ public class BoundarySIdentifierPersonnel {
 		login = clavier.entreeClavierString();
 		System.out.println("Veuillez entrer votre mot de passe");
 		mdp = clavier.entreeClavierString();
-		return controlSIdentifier.sIdentifier(ProfilUtilisateur.PERSONNEL, login, mdp);	
+		int numPersonnel = controlSIdentifier.sIdentifier(ProfilUtilisateur.PERSONNEL, login, mdp);
+		if(numPersonnel == -1){
+		    System.out.println("Erreur - connexion");
+		}else{
+		    System.out.println("Connexion réussie");
+		}
 	}
 }
