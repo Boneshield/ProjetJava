@@ -8,5 +8,6 @@ public class Accompagnement extends Aliment {
 	
 	public Object clone(){
 	    Accompagnement aClone = new Accompagnement(this.getNom());
+	    return aClone;
 	}
 }

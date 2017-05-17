@@ -2,10 +2,10 @@ package model;
 
 public class Commande{
     private static int numCommande = 0;
-    private Client client;
+    private int numClient;
     private Hamburger hamburger;
-    private int Accompagnement accompagnement;
-    private int Boisson boisson;
+    private Accompagnement accompagnement;
+    private Boisson boisson;
     private int numCommandeAttribue;
     
     public Commande(int numClient, Hamburger hamburger, Accompagnement accompagnement, Boisson boisson){
@@ -20,19 +20,19 @@ public class Commande{
         return numClient;
     }
     
-    public int getHamburger(){
+    public Hamburger getHamburger(){
         return hamburger;
     }
     
-    public int getAccompagnement(){
+    public Accompagnement getAccompagnement(){
         return accompagnement;
     }
     
-    public int getBoisson(){
+    public Boisson getBoisson(){
         return boisson;
     }
     
-    public int getnumCommandeAttribue(){
+    public int getNumCommandeAttribue(){
         return numCommandeAttribue;
     }
 }

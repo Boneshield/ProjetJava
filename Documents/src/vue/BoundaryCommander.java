@@ -1,5 +1,7 @@
 package vue;
 
+import java.util.List;
+
 import control.ControlCommander;
 import control.ControlVerifierIdentification;
 import model.ProfilUtilisateur;
@@ -49,12 +51,15 @@ public class BoundaryCommander {
 		    }
 		    if(carteRenseignee){
 		        int numCommande = controlCommander.enregistrerCommande(numClient, numHamburger, numAccompagnement, numBoisson);
-		        System.out.println("Votre numéro de commande est le" + numCommande);
+		        System.out.println("Votre numéro de commande est le : " + numCommande);
 		    }else{
 		        System.out.println("Aucune carte bancaire renseignée");
-		    };
+		    }
 		}
-		System.out.println("Client non connecté");
+		else
+		{
+			System.out.println("Client non connecté");
+		}
 	}
 
 }

@@ -1,6 +1,8 @@
 package vueGraphique;
 
+import javax.swing.JFrame;
 
-Class ClientFrame extends JFrame{
+
+class ClientFrame extends JFrame{
     
 }

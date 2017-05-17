@@ -20,7 +20,6 @@ public class BoundaryEnregistrerCoordonneesBancaires {
 		int numCarte, dateCarte;
 		System.out.println("Veuillez saisir votre numéro de carte bancaire");
 		numCarte = clavier.entreeClavierInt();
-		boolean entreeValide = true;
 		System.out.println("Veuillez saisir la date d'expiration de votre carte bancaire (MMAA)");
 		dateCarte = clavier.entreeClavierInt();
 		boolean carteValide = controlVerifierCoordonneesBancaires.verifierCoordonneesBancaires(numCarte, dateCarte);

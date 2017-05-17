@@ -1,9 +1,16 @@
 package control;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import model.BDClient;
 import model.BDCommande;
 import model.Carte;
+import model.Client;
 import model.Commande;
+import model.Hamburger;
+import model.Accompagnement;
+import model.Boisson;
 
 public class ControlCommander {
     private BDClient bdClient;
@@ -11,33 +18,32 @@ public class ControlCommander {
     
 	public ControlCommander(Carte carte, BDClient bdClient,
 			BDCommande bdCommande) {
-		this.carte = carte
 		this.bdClient = bdClient;
 		this.bdCommande = bdCommande;
 	}
 	
 	public List<String> getListeHamburger(){
-	    List<Hamburger> listeHamburger = carte.getListeHamburger();
+	    List<Hamburger> listeHamburger = Carte.getInstance().getListeHamburger();
 	    List<String> listeReturn = new ArrayList<>();
-	    for(Hamburger hamburger : this.listeHamburger){
+	    for(Hamburger hamburger : listeHamburger){
 	        listeReturn.add(hamburger.getNom());
 	    }
 	    return listeReturn;
 	}
 	
 	public List<String> getListeAccompagnement(){
-	    List<Accompagnement> listeAccompagnement = carte.getListeAccompagnement();
+	    List<Accompagnement> listeAccompagnement = Carte.getInstance().getListeAccompagnement();
 	    List<String> listeReturn = new ArrayList<>();
-	    for(Accompagnement accompagnement : this.listeAccompagnement){
+	    for(Accompagnement accompagnement : listeAccompagnement){
 	        listeReturn.add(accompagnement.getNom());
 	    }
 	    return listeReturn;
 	}
 	
 	public List<String> getListeBoisson(){
-	    List<Boisson> listeBoisson = carte.getListeBoisson();
+	    List<Boisson> listeBoisson = Carte.getInstance().getListeBoisson();
 	    List<String> listeReturn = new ArrayList<>();
-	    for(Boisson boisson : this.listeBoisson){
+	    for(Boisson boisson : listeBoisson){
 	        listeReturn.add(boisson.getNom());
 	    }
 	    return listeReturn;
@@ -49,9 +55,9 @@ public class ControlCommander {
 	}
 	
 	public int enregistrerCommande(int numClient, int numHamburger, int numAccompagnement, int numBoisson){
-	    Hamburger hamburger = carte().choixHamburger(numHamburger);
-	    Accompagnement accompagnement = carte().choixAccompagnement(numAccompagnement);
-	    Boisson boisson = carte().choixBoisson(numBoisson);
+	    Hamburger hamburger = Carte.getInstance().choixHamburger(numHamburger);
+	    Accompagnement accompagnement = Carte.getInstance().choixAccompagnement(numAccompagnement);
+	    Boisson boisson = Carte.getInstance().choixBoisson(numBoisson);
 	    int numCommande = BDCommande.getInstance().enregistrerCommande(numClient, hamburger, accompagnement, boisson);
 	    return numCommande;
 	}

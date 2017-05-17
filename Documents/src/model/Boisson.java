@@ -8,5 +8,6 @@ public class Boisson extends Aliment{
 	
 	public Object clone(){
 	    Boisson aClone = new Boisson(this.getNom());
+	    return aClone;
 	}
 }

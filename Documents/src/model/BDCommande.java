@@ -2,27 +2,29 @@ package model;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Map.Entry;
 
 public final class BDCommande {
-    private static BDCommande = null;
+    private static BDCommande instance = null;
     private Map<Integer, Commande> mapCommande = new HashMap<>();
     
     private BDCommande(){
         super();
     }
     
-    private static class BDCommandeHolder{
-        private final static BDCommande instance = new BDCommande();
-    }
-    
     public final static BDCommande getInstance() {
+    	if(BDCommande.instance == null) {
+			synchronized(BDCommande.class) {
+				if(BDCommande.instance == null) {
+					BDCommande.instance = new BDCommande();
+				}
+			}
+		}
 		return BDCommande.instance;
 	}
     
-    public int enregistrerCommande(int numClient, Hamburger hamburger, Accompagnement accompagnment, Boisson boisson){
+    public int enregistrerCommande(int numClient, Hamburger hamburger, Accompagnement accompagnement, Boisson boisson){
         Commande commande = new Commande(numClient, hamburger, accompagnement, boisson);
-        numCommande = commande.getNumCommandeAttribue();
+        int numCommande = commande.getNumCommandeAttribue();
         mapCommande.put(numCommande, commande);
         return numCommande;
     }

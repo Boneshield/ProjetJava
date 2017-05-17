@@ -45,7 +45,7 @@ public final class Carte {
 	
 	public List<Hamburger> getListeHamburger(){
 	    List<Hamburger> listeReturn = new ArrayList<>();
-	    for(Hamburger hamburger : this.listeHamburger){
+	    for(Hamburger hamburger : listeHamburger){
 	        listeReturn.add((Hamburger) hamburger.clone());
 	    }
 	    return listeReturn;
@@ -53,7 +53,7 @@ public final class Carte {
 	
 	public List<Accompagnement> getListeAccompagnement(){
 	    List<Accompagnement> listeReturn = new ArrayList<>();
-	    for(Accompagnement accompagnement : this.listeAccompagnement){
+	    for(Accompagnement accompagnement : listeAccompagnement){
 	        listeReturn.add((Accompagnement) accompagnement.clone());
 	    }
 	    return listeReturn;
@@ -61,7 +61,7 @@ public final class Carte {
 	
 	public List<Boisson> getListeBoisson(){
 	    List<Boisson> listeReturn = new ArrayList<>();
-	    for(Boisson boisson : this.listeBoisson){
+	    for(Boisson boisson : listeBoisson){
 	        listeReturn.add((Boisson) boisson.clone());
 	    }
 	    return listeReturn;

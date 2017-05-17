@@ -13,7 +13,7 @@ public class BoundarySIdentifierClient {
 		this.controlSIdentifier = controlSIdentifier;
 	}
 
-	public int identificationClient() {
+	public void identificationClient() {
 		String login, mdp;
 		System.out.println("Veuillez entrer votre login");
 		login = clavier.entreeClavierString();
