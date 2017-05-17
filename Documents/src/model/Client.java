@@ -13,10 +13,18 @@ public class Client extends Profil {
 		+ this.isConnected() + ", carte="+ carteBancaire + "]";
 	}
 	
+	/**
+	* Ajoute les informations bancaires passées en paramètre dans la carte
+	* @param int numCarte, int dateCarte
+	*/
 	public void enregistrerCoordonneesBancaires(int numCarte, int dateCarte){
 	    carteBancaire = new CarteBancaire(numCarte, dateCarte);
 	}
 	
+	/**
+	* Retourne true si la carte de l'utilisateur est renseignée et faux sinon
+	* @return true or false
+	*/
 	public boolean isCarteRenseignee(){
 	    return carteBancaire != null;
 	}

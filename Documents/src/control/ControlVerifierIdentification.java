@@ -16,6 +16,11 @@ public class ControlVerifierIdentification {
 		this.bdPersonnel= bdPersonnel;
 	}
 
+	/**
+	* Vérifie que l'utilisateur est connecté en fonction de son profil
+	* @param ProfilUtilisateur profil, int numProfil
+	* @return String
+	*/
 	public boolean verifierIdentification(ProfilUtilisateur profil,
 			int numProfil) {
 		switch(profil){

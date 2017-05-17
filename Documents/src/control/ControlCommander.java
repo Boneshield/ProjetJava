@@ -16,11 +16,17 @@ public class ControlCommander {
     private BDClient bdClient;
     private BDCommande bdCommande;
     
+    
+    /**
+    * Constructeur du contrôleur commander
+    * @param Carte carte, BDClient bdClient
+    */
 	public ControlCommander(Carte carte, BDClient bdClient,
 			BDCommande bdCommande) {
 		this.bdClient = bdClient;
 		this.bdCommande = bdCommande;
 	}
+	
 	
 	public List<String> getListeHamburger(){
 	    List<Hamburger> listeHamburger = Carte.getInstance().getListeHamburger();
@@ -49,11 +55,21 @@ public class ControlCommander {
 	    return listeReturn;
 	}
 	
+	/**
+	* Retourne vrai si le client numClient possède une carte bancaire et faux sinon 
+	* @param int numClient
+	* @return true or false
+	*/
 	public boolean isCarteRenseignee(int numClient){
 	    Client client = bdClient.getClient(numClient);
 	    return client.isCarteRenseignee();
 	}
 	
+	/**
+	* Enregistre la commande pour un client dans BDCommande en applelant enregistrerCommande() dans BDCommande
+	* @param int numClient, int numHamburger, int numAccompagnement, int numBoisson 
+	* @return int numCommande
+	*/
 	public int enregistrerCommande(int numClient, int numHamburger, int numAccompagnement, int numBoisson){
 	    Hamburger hamburger = Carte.getInstance().choixHamburger(numHamburger);
 	    Accompagnement accompagnement = Carte.getInstance().choixAccompagnement(numAccompagnement);

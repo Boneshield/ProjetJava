@@ -1,5 +1,8 @@
 package model;
 
+/**
+* Classe gérant une commande
+*/
 public class Commande{
     private static int numCommande = 0;
     private int numClient;
@@ -15,6 +18,7 @@ public class Commande{
         this.boisson = boisson;
         numCommandeAttribue = numCommande++;
     }
+    
     
     public int getNumClient(){
         return numClient;

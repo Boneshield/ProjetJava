@@ -9,6 +9,10 @@ public class BDClient {
 	private Map<Integer, Client> listeClient = new HashMap<>();
 	private int numClient = 0;
 	
+	/**
+	* Ajoute un client dans la BD client
+	* @param Client client
+	*/
 	public void ajouterClient(Client client) {
 		listeClient.put(numClient++ ,client);
 	}
@@ -17,11 +21,15 @@ public class BDClient {
 		return listeClient;
 	}
 
-	
 	public String toString() {
     	return "BDClient [listeClient=" + listeClient + "]";
     }
 	
+	/**
+	* Connecte le client à la BD avec son login et son mot de passe et retourne son numéro
+	* @param String login, String mdp
+	* @return int
+	*/
 	public int connexionClient(String login, String mdp) {
 		//Parcours de la hashMap
 		Client valeur;
@@ -37,6 +45,10 @@ public class BDClient {
 		return -1;
 	}
 	
+	/**
+	* Deconnecte le client de la BD à l'aide de son numéro
+	* @param int numClient
+	*/
 	public void deconnexionClient(int numClient) {
 		//Parcours de la hashMap
 		Client valeur;

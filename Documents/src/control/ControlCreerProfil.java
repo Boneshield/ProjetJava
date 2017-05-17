@@ -16,10 +16,18 @@ public class ControlCreerProfil {
 		this.bdPersonnel = bdPersonnel;
 	}
 
+	/**
+	* Affiche les valeurs des BD client et personnel
+	* @return String
+	*/
 	public String visualiserBDUtilisateur() {
 		return (bdPersonnel + "\n" + bdClient);
 	}
 
+	/**
+	* Permet de créer un profil utilisateur avec le type, le nom, le prenom et le mdp
+	* @param ProfilUtilisateur profil, String nom, String prenom, String mdp
+	*/
 	public void creerProfil(ProfilUtilisateur profil, String nom,
 		String prenom, String mdp) {
 		

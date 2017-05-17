@@ -5,8 +5,19 @@ import model.Hamburger;
 import model.Accompagnement;
 import model.Boisson;
 
+
+/**
+* Résumé du rôle de la méthode.
+* Commentaires détaillés sur le role de la methode
+* @param val la valeur a traiter
+* @return la valeur calculée
+*/
 public class ControlAjouterAlimentCarte {
 	
+	/**
+	* Ajoute un aliment à la carte en fonction du type d'aliment passé en paramètre
+	* @param TypeAliment aliment, String nom
+	*/
 	public void ajouterAliment(TypeAliment aliment, String nom) {
 		
 		switch(aliment)
@@ -31,6 +42,7 @@ public class ControlAjouterAlimentCarte {
 		}
 	}
 
+	
 	public String visualiserCarte() {
 		return Carte.getInstance().toString();
 	}
