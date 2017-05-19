@@ -35,6 +35,7 @@ public class ControlAjouterAlimentCarte {
 			case BOISSON :
 				Boisson boisson = new Boisson(nom);
 				Carte.ajouterBoisson(boisson);
+				break;
 				
 			default:
 				System.out.println("type aliment non reconnu");

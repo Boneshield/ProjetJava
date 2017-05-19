@@ -8,22 +8,22 @@ import control.ControlSIdentifier;
 import control.ControlVerifierCoordonneesBancaires;
 import control.ControlVerifierIdentification;
 import control.ControlVisualiserCommandeJour;
-import restaurationRapide.AlimentMenu;
-import restaurationRapide.BDClient;
-import restaurationRapide.BDCommande;
-import restaurationRapide.BDPersonnel;
-import restaurationRapide.Carte;
-import restaurationRapide.ProfilUtilisateur;
-import vueTextuelle.BoundaryCommander;
-import vueTextuelle.BoundaryEnregistrerCoordonneesBancaires;
-import vueTextuelle.BoundaryVisualiserCommandeJour;
+import control.TypeAliment;
+import model.BDClient;
+import model.BDCommande;
+import model.BDPersonnel;
+import model.Carte;
+import model.ProfilUtilisateur;
+import vue.BoundaryCommander;
+import vue.BoundaryEnregistrerCoordonneesBancaires;
+import vue.BoundaryVisualiserCommandeJour;
 
 public class TestCasVisualisationCommandeJour {
 
 	public static void main(String[] args) {
 
 		// Initialisation des objets metier
-		BDCommande bdCommande = new BDCommande.getInstance();
+		BDCommande bdCommande = BDCommande.getInstance();
 		BDClient bdClient = new BDClient();
 		BDPersonnel bdPersonnel = new BDPersonnel();
 		Carte carte = Carte.getInstance();
@@ -38,21 +38,14 @@ public class TestCasVisualisationCommandeJour {
 		int numClient = controlSIdentifier.sIdentifier(
 				ProfilUtilisateur.CLIENT, "Hector.Dupond", "cdh");
 
-		ControlAjouterAlimentCarte controlAjouterAlimentCarte = new ControlAjouterAlimentCarte(
-				carte);
-		controlAjouterAlimentCarte.ajouterAliment(AlimentMenu.HAMBURGER,
-				"baconBurger");
-		controlAjouterAlimentCarte.ajouterAliment(AlimentMenu.HAMBURGER,
-				"chickenBurger");
-		controlAjouterAlimentCarte.ajouterAliment(AlimentMenu.HAMBURGER,
-				"cheeseBurger");
-		controlAjouterAlimentCarte.ajouterAliment(AlimentMenu.ACCOMPAGNEMENT,
-				"frites");
-		controlAjouterAlimentCarte.ajouterAliment(AlimentMenu.ACCOMPAGNEMENT,
-				"pommesChips");
-		controlAjouterAlimentCarte.ajouterAliment(AlimentMenu.BOISSON, "coca");
-		controlAjouterAlimentCarte.ajouterAliment(AlimentMenu.BOISSON,
-				"orangeBulles");
+		ControlAjouterAlimentCarte controlAjouterAlimentCarte = new ControlAjouterAlimentCarte();
+		controlAjouterAlimentCarte.ajouterAliment(TypeAliment.HAMBURGER,"baconBurger");
+		controlAjouterAlimentCarte.ajouterAliment(TypeAliment.HAMBURGER,"chickenBurger");
+		controlAjouterAlimentCarte.ajouterAliment(TypeAliment.HAMBURGER,"cheeseBurger");
+		controlAjouterAlimentCarte.ajouterAliment(TypeAliment.ACCOMPAGNEMENT,"frites");
+		controlAjouterAlimentCarte.ajouterAliment(TypeAliment.ACCOMPAGNEMENT,"pommesChips");
+		controlAjouterAlimentCarte.ajouterAliment(TypeAliment.BOISSON,"coca");
+		controlAjouterAlimentCarte.ajouterAliment(TypeAliment.BOISSON,"orangeBulles");
 
 		ControlVerifierIdentification controlVerifierIdentification = new ControlVerifierIdentification(
 				bdClient, bdPersonnel);
@@ -68,8 +61,7 @@ public class TestCasVisualisationCommandeJour {
 				boundaryEnregistrerCoordonneesBancaires);
 
 		// Initialisation controleur du cas
-		ControlVisualiserCommandeJour controlVisualiserCommandeJour = new ControlVisualiserCommandeJour(
-				bdCommande);
+		ControlVisualiserCommandeJour controlVisualiserCommandeJour = new ControlVisualiserCommandeJour();
 
 		// Initialisation vue du cas
 		new BoundaryVisualiserCommandeJour(controlVisualiserCommandeJour);

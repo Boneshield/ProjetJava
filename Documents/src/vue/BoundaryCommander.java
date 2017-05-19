@@ -51,6 +51,7 @@ public class BoundaryCommander {
 		    }
 		    if(carteRenseignee){
 		        int numCommande = controlCommander.enregistrerCommande(numClient, numHamburger, numAccompagnement, numBoisson);
+		        System.out.println("Ecran Client");
 		        System.out.println("Votre numéro de commande est le : " + numCommande);
 		    }else{
 		        System.out.println("Aucune carte bancaire renseignée");

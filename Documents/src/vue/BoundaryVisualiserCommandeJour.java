@@ -1,12 +1,15 @@
 package vue;
 
-import control.ControlVisualisationCommandeJour;
+import java.util.Observable;
+import java.util.Observer;
+
+import control.ControlVisualiserCommandeJour;
 import model.BDCommande;
 
 public class BoundaryVisualiserCommandeJour implements Observer{
     //private ControlVisualisationCommandeJour controlVisualisationCommandeJour;
     
-    public BoundaryVisualiserCommandeJour(ControlVisualisationCommandeJour controlVisualisationCommandeJour){
+    public BoundaryVisualiserCommandeJour(ControlVisualiserCommandeJour controlVisualisationCommandeJour){
         //this.controlVisualisationCommandeJour = controlVisualisationCommandeJour;
         controlVisualisationCommandeJour.setObserver(this);
     }
