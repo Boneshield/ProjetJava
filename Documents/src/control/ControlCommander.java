@@ -56,7 +56,7 @@ public class ControlCommander {
 	}
 	
 	/**
-	* Retourne vrai si le client numClient possède une carte bancaire et faux sinon 
+	* Retourne vrai si le client numClient possède une carte bancaire et faux sinon
 	* @param int numClient
 	* @return true or false
 	*/
@@ -67,7 +67,7 @@ public class ControlCommander {
 	
 	/**
 	* Enregistre la commande pour un client dans BDCommande en applelant enregistrerCommande() dans BDCommande
-	* @param int numClient, int numHamburger, int numAccompagnement, int numBoisson 
+	* @param int numClient, int numHamburger, int numAccompagnement, int numBoisson
 	* @return int numCommande
 	*/
 	public int enregistrerCommande(int numClient, int numHamburger, int numAccompagnement, int numBoisson){

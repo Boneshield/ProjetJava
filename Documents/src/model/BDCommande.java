@@ -3,7 +3,7 @@ package model;
 import java.util.HashMap;
 import java.util.Map;
 
-public final class BDCommande {
+public final class BDCommande extends Observable{
     private static BDCommande instance = null;
     private Map<Integer, Commande> mapCommande = new HashMap<>();
     
@@ -34,6 +34,10 @@ public final class BDCommande {
         Commande commande = new Commande(numClient, hamburger, accompagnement, boisson);
         int numCommande = commande.getNumCommandeAttribue();
         mapCommande.put(numCommande, commande);
+        super.setChanged();
+        String labels = "Commande no "+commande.getNumCommandeAttribue+":"+commande.getHamburger().getNom()
+                        +", "+commande.getAccompagnement().getNom()+", "+commande.getBoisson().getNom();
+        super.notifyObservers(labels);
         return numCommande;
     }
     
@@ -42,11 +46,12 @@ public final class BDCommande {
     }
     
     /**
-	* Supprime la commande numCommande de la map 
+	* Supprime la commande numCommande de la map
 	* @param int numCommande
 	* @return Commande commande
 	*/
     public Commande removeCommande(int numCommande){
         return mapCommande.remove(numCommande);
     }
+    
 }

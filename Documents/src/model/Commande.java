@@ -39,4 +39,10 @@ public class Commande{
     public int getNumCommandeAttribue(){
         return numCommandeAttribue;
     }
+    
+    public String toString() {
+		return "Commande [numClient=" + getNom() + ", hamburger=" + hamburger.getNom()
+		+ ", accompagnement=" + accompagnement.getNom() + ", boisson=" + boisson.getNom()
+		+ "numCommandeAttribue=" + numCommandeAttribue + "]";
+	}
 }
