@@ -18,7 +18,7 @@ public class BoundaryVisualiserCommandeJour implements Observer{
         if (arg0 instanceof BDCommande) {
             if (arg1 instanceof String) {
                 String texte = (String) arg1;
-                System.out.println("Ecran cuisinier\n" + texte);
+                fichier.ecrire("Ecran cuisinier" + texte);
             }else{
                 System.out.println("type de message inconnu");
             }
