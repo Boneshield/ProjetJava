@@ -34,7 +34,17 @@ public class BDPersonnel{
 		return -1;
 	}
     
+    
     public Personnel getPersonnel(int numPersonnel){
 	    return listePersonnel.get(numPersonnel);
+	}
+	
+	/**
+	* Deconnecte le personnel de la BD à l'aide de son numéro
+	* @param int numPersonnel
+	*/
+	public void deconnexionPersonnel(int numPersonnel) {
+		Personnel personnel = listePersonnel.get(numPersonnel);
+		personnel.deconnexionProfil();
 	}
 }
