@@ -26,3 +26,6 @@ votre compte personnel sur le site internet. Et rendez-vous dans la rubrique « 
 Après  s’être  connecté,  le  client  peut  passer  sa 
 commande. Pour  simplifier  le  logiciel  à  réaliser, le client ne pourra  commander  que  des  menus.  Ils  seront obligatoirement  composés  d’un  burger,  d’un accompagnement et d’une boisson. Le client   entre   ensuite ses coordonnées bancaires pour valider sa commande. Apparaîtra alors à l’écran un fichier à imprimer contenant un numéro de commande, la date et 
 l’heure de la commande et le récapitulatif de la commande.
+
+
+EDIT: Projet actuellement terminé. Aucune autre modification ne sera apporté.
